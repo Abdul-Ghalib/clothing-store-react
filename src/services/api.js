@@ -1,5 +1,7 @@
 // API service for Eleonora Bonucci client-side actions and backend connection
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+
 /**
  * Subscribes an email to the newsletter.
  * Backend Endpoint: POST /api/newsletter/subscribe
@@ -24,7 +26,7 @@ export async function subscribeNewsletter(email) {
  */
 export async function loginUser(email, password) {
   try {
-    const response = await fetch('/api/v1/users/login', {
+    const response = await fetch(`${API_BASE_URL}/api/v1/users/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -59,7 +61,7 @@ export async function loginUser(email, password) {
  */
 export async function registerUser(username, email, password) {
   try {
-    const response = await fetch('/api/v1/users/register', {
+    const response = await fetch(`${API_BASE_URL}/api/v1/users/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -91,7 +93,7 @@ export async function registerUser(username, email, password) {
  */
 export async function logoutUser(email) {
   try {
-    const response = await fetch('/api/v1/users/logout', {
+    const response = await fetch(`${API_BASE_URL}/api/v1/users/logout`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -121,7 +123,7 @@ export async function logoutUser(email) {
  */
 export async function getPosts() {
   try {
-    const response = await fetch('/api/v1/posts/getPosts');
+    const response = await fetch(`${API_BASE_URL}/api/v1/posts/getPosts`);
     if (!response.ok) {
       let errorMessage = 'Failed to fetch posts';
       try {
@@ -149,7 +151,7 @@ export async function getPosts() {
  */
 export async function createPost(postData) {
   try {
-    const response = await fetch('/api/v1/posts/create', {
+    const response = await fetch(`${API_BASE_URL}/api/v1/posts/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -185,7 +187,7 @@ export async function createPost(postData) {
  */
 export async function updatePost(id, postData) {
   try {
-    const response = await fetch(`/api/v1/posts/update/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/posts/update/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -220,7 +222,7 @@ export async function updatePost(id, postData) {
  */
 export async function deletePost(id) {
   try {
-    const response = await fetch(`/api/v1/posts/delete/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/posts/delete/${id}`, {
       method: 'DELETE',
     });
 
