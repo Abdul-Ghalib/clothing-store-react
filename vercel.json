@@ -5,6 +5,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://clothing-store-backend-76of.onrender.com/api/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ]
 }
