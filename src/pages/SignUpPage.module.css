@@ -1,0 +1,14 @@
+.pageContainer {
+  width: 1580px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Tablet & Mobile Layouts */
+@media (max-width: 768px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0;
+  }
+}

@@ -1,0 +1,273 @@
+.footer {
+  height: 580px;
+  float: left;
+  width: 1580px;
+  background-color: #EEEEEE;
+}
+
+.footerMain {
+  margin-top: 50px;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+
+.footerInfo {
+  float: left;
+  width: 480px;
+  line-height: 20px;
+}
+
+.head {
+  font-size: 15px;
+  color: #444444;
+  font-family: 'Playfair Display', serif;
+  margin-left: 37px;
+  margin-bottom: 30px;
+}
+
+.headPayment {
+  font-size: 15px;
+  color: #444444;
+  font-family: 'Playfair Display', serif;
+  margin-left: 37px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.list {
+  list-style: none;
+  color: #555555;
+  padding: 0;
+  margin: 0;
+  margin-left: 37px;
+}
+
+.list2 {
+  color: #999999;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 37px;
+}
+
+.list2 li, .list li {
+  margin-bottom: 8px;
+}
+
+.details {
+  font-weight: bold;
+  color: #555555;
+}
+
+.paymentContainer {
+  width: 350px;
+  margin-left: 37px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.size {
+  width: 44px;
+  height: 20px;
+}
+
+.wechatPay {
+  margin-left: 285px;
+  margin-top: 5px;
+}
+
+.div9 {
+  float: left;
+  width: 1577px;
+  height: 20px;
+  margin-top: 140px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.exc {
+  font-family: Lato, serif;
+  font-size: 16px;
+  margin-right: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.star {
+  width: 100px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.review {
+  margin-right: 10px;
+  font-family: Arial;
+  font-size: 15px;
+  color: #000;
+}
+
+.star2 {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.trust {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.upward {
+  background-color: rgba(0, 0, 0, 0.096);
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-left: 1500px;
+  transition: all 0.5s;
+  border-radius: 2px;
+}
+
+.upward:hover {
+  background-color: rgba(0, 0, 0, 0.575);
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+}
+
+.div10 {
+  width: 1577px;
+  height: 65.19px;
+  background-color: black;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-family: Lato, sans-serif;
+}
+
+.divKey {
+  display: flex;
+  align-items: center;
+}
+
+.key {
+  background-color: white;
+  width: 40px;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+.copyrights {
+  color: white;
+  margin-right: 618px;
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 768px) {
+  .footer {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .footerMain {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+
+  .footerInfo {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .upward {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .div9 {
+    float: none;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .div10 {
+    float: none;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .copyrights {
+    margin-right: 0;
+  }
+
+  .key {
+    margin-left: 0;
+  }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 480px) {
+  .footerMain {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .footerInfo {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .list, .list2, .paymentContainer, .head, .headPayment {
+    margin-left: 15px;
+  }
+
+  .paymentContainer {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .wechatPay {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .div9 {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .exc, .review, .trust {
+    margin-right: 0;
+  }
+
+  .upward {
+    float: none;
+    margin: 0 auto 20px auto;
+  }
+}

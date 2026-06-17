@@ -1,0 +1,232 @@
+.clothesMain {
+  margin-left: 135px;
+}
+
+.clothesDiv {
+  margin-top: 30px;
+  width: 670px;
+  float: left;
+}
+
+.clothesDiv2 {
+  margin-top: 30px;
+  width: 670px;
+  float: left;
+}
+
+.tallImageDiv {
+  width: 640px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shortImageDiv {
+  width: 640px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tallImage {
+  width: 640px;
+  height: 750px;
+  transition: transform 0.4s;
+  display: block;
+}
+
+.shortImage {
+  width: 640px;
+  height: 373px;
+  transition: transform 0.4s;
+  display: block;
+}
+
+.tallImageDiv:hover .tallImage,
+.shortImageDiv:hover .shortImage {
+  transform: scale(1.1);
+}
+
+/* Hover Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.tallImageDiv:hover .overlay,
+.shortImageDiv:hover .overlay {
+  opacity: 1;
+}
+
+.quickViewText {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px 16px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Favorite button overlay */
+.favoriteButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+  z-index: 10;
+  outline: none;
+  padding-bottom: 2px;
+}
+
+.favoriteButton:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+.favoriteButton.active {
+  color: #e02424;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.designer {
+  font-size: 13px;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+}
+
+.titleText {
+  font-family: 'Playfair Display', serif;
+  font-size: 25.2px;
+  font-weight: 900;
+  color: #000;
+}
+
+.ctaText {
+  background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0) 3px no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
+  padding-bottom: 20px;
+  font-size: 13px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+.ctaText:hover {
+  --d: 100%;
+  --p: 100%;
+}
+
+.productCard {
+  margin-bottom: 30px;
+}
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  .clothesMain {
+    margin-left: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .clothesDiv,
+  .clothesDiv2 {
+    width: 50%;
+    margin-top: 20px;
+    float: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .tallImageDiv,
+  .shortImageDiv {
+    width: 100%;
+  }
+
+  .tallImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .shortImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .titleText {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  .clothesMain {
+    margin-left: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clothesDiv,
+  .clothesDiv2 {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .tallImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.15;
+  }
+
+  .shortImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.15;
+  }
+  
+  .productCard {
+    margin-bottom: 40px;
+  }
+  
+  .titleText {
+    font-size: 18px;
+  }
+}

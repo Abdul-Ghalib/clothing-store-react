@@ -1,0 +1,53 @@
+.pageContainer {
+  width: 1580px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.pageTitle {
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+  color: #000000;
+}
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .titleContainer {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 480px) {
+  .titleContainer {
+    margin-top: 20px;
+  }
+
+  .pageTitle {
+    font-size: 20px;
+  }
+}
