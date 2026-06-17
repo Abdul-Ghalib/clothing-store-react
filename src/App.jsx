@@ -27,6 +27,7 @@ export default function App() {
             <Route path="/women" element={<WomenPage />} />
             <Route path="/kids" element={<KidsPage />} />
             <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/login" element={<SignUpPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/order-success" element={<OrderSuccessPage />} />
             <Route path="/admin-login" element={<AdminLoginPage />} />

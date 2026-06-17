@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './SignUpPage.module.css';
 import Navbar from '../components/Navbar';
 import Logo from '../components/Logo';
@@ -12,6 +13,7 @@ import { useFavorites } from '../context/FavoritesContext';
 import { loginUser, registerUser } from '../services/api';
 
 export default function SignUpPage() {
+  const navigate = useNavigate();
   const { cartCount } = useCart();
   const { favoritesCount } = useFavorites();
   const [isLoading, setIsLoading] = useState(false);
@@ -27,6 +29,7 @@ export default function SignUpPage() {
       // Store user token/email if needed
       localStorage.setItem('userEmail', email);
       localStorage.setItem('isLoggedIn', 'true');
+      navigate('/');
     } catch (error) {
       console.error('Login API error:', error);
       alert(error.message || 'Login failed. Please check your credentials.');
@@ -42,6 +45,7 @@ export default function SignUpPage() {
       const response = await registerUser(username, email, password);
       console.log('Register API response:', response);
       alert(response.message || 'Registration successful! You can now log in.');
+      navigate('/login');
     } catch (error) {
       console.error('Register API error:', error);
       alert(error.message || 'Registration failed.');
